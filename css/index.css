@@ -1,0 +1,113 @@
+
+body{
+    background-image: url("../img/maxresdefault.jpg");
+    background-size: 100%;
+}
+
+.header{
+    margin-bottom: 20px;
+}
+
+.main{
+    left: 32%;
+    margin-top: 12%;
+    position: absolute;
+    width: 570px;
+    height: 400px;
+    background: rgb(215, 215, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 40px;
+    color: darkorange;
+}
+
+h6{
+    font-size: 13px;
+    margin-top: -15%;
+    margin-left: 100%;
+}
+
+
+.dvs1{
+    /* расположение объекта на экране */
+    
+    top: 35%;
+    left: 38%;
+    
+}
+
+.butt{
+     border-radius: 50%;
+    /* обводка кнопки */
+    border: 3px solid #000000;
+    /* шрифт кнопки */
+    font-size: 30px;
+    /*цвет кнопки*/
+    color: #000000;
+    /*нижнее подчеркивание*/
+    text-decoration: none;
+    /* текст заглавными буквами */
+    text-transform: uppercase;
+    background-color: rgba(233, 227, 227, 0.87);
+    /* ширина и высота блока */
+    width: 280px;
+    height: 110px;
+    /* параметр, чтобы ссылка вела себя как блочный элемент */
+    display: block;
+    /* выравнивание текста кнопки */
+    text-align: center;
+    line-height: 100px;
+    /* дополнение псевдоэлементов для кнпоки */
+    position: relative;
+    /* время изменения анимации на кнопке */
+    transition: .5s;
+    /* функция скрывающая все за пределами кнопки */
+    overflow: hidden;
+}
+
+.butt::after{
+    position: absolute;
+    width: 283px;
+    height: 110px;
+    /* цвет блока */
+    background-color: rgba(255, 0, 0, 0.945);
+    /* выравнивание блока по левому краю от кнопки */
+    top: 0;
+    left: -101.25%;
+    /* прозрачность блока */
+    /* opacity: 1; */
+    /* время движения блока */
+    transition: .3s;
+    /* понизим приоритет блока, чтобы тест кнопки был виден */
+    z-index: 1;
+
+    /* задержка при анимации */
+    transition-delay: 0s;
+}
+
+/* изменим цвет текста кнопки, после наведения курсора */
+.butt:hover{
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+/* создание псевдоэлемента который срабатывает при наведении курсора на кнопку */
+.butt:hover::after {
+    /* передвигаем блок влево на кнопку */
+    left: -0.75%;
+}
+
+/*при наведении курсора иизменяется текст*/
+.dvs1 .butt::after{
+    content: 'Are you sure?';
+    /* text-transform: none; */
+    font-size: 20px;
+    text-align: auto;
+    line-height: 100px;
+}

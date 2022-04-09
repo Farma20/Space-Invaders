@@ -1,0 +1,10 @@
+body{
+    background: #000;
+}
+
+canvas{
+    background:url('../img/kosmos-art-pikseli-8bit-planeta-zvezdy-retro-grafika.jpg');
+    background-size: 100%;
+    display: block;
+    margin: 30px auto;
+}
